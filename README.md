@@ -1,2 +1,1 @@
-JsBasic
-Здесь будет выкладываться домашнее задание по курсу JavaScript Basic level
+ сделал ветку для reqest

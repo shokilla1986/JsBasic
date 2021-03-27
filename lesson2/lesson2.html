@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <!-- 1. Дан код:
+   var a = 1, b = 1, c, d;
+   c = ++a; alert(c); // 2 - префиксная форма выводит новое значение;
+   d = b++; alert(d); // 1 - постфиксная форма выводит старое значение;
+   c = (2+ ++a); alert(c); // 5 складывает 2 и 3(т.к префиксное значение а = 3);
+   d = (2+ b++); alert(d); // 4 складывает 2 и 2 (т.к b постфиксное значение 2);
+   alert(a); // 3 в процессе чтения кода увеличилось 2 раза;
+   alert(b); // 3 в процессе чтения кода увеличилось 2 раза;
+
+
+    2. Чему будет равен x в примере ниже?
+   var a = 2;
+   var x = 1 + (a *= 2);
+   x = 5; // 1 + (2 * 2);
+
+   3. Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. Затем написать скрипт,
+   который работает по следующему принципу:
+   если a и b положительные, вывести их разность;
+   если а и b отрицательные, вывести их произведение;
+   если а и b разных знаков, вывести их сумму; ноль можно считать положительным числом. -->
+
+   <!-- <script>
+      var a = +prompt("Введите число");
+      var b = +prompt("Введите число");
+
+      if (a >= 0 && b >= 0) {
+         alert(a - b);
+      }
+      else if (a < 0 && b < 0) {
+         alert(a * b);
+      }
+      else if (a >= 0 || a < 0 || b >= 0 || b < 0) {
+         alert(a + b)
+      }
+
+   </script> -->
+
+   <!-- 4. Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a до
+   15.
+   Выводить буду в консоль, тк document.write выводит в строку, а там в списке
+
+   <script>
+      var a = +prompt("Для последовательного вывода чисел , введите начальное число от 0 до 15");
+
+      switch (a) {
+         case 0:
+            console.log(0);
+         case 1:
+            console.log(1);
+         case 2:
+            console.log(2);
+         case 3:
+            console.log(3);
+         case 4:
+            console.log(4);
+         case 5:
+            console.log(5);
+         case 6:
+            console.log(6);
+         case 7:
+            console.log(7);
+         case 8:
+            console.log(8);
+         case 9:
+            console.log(9);
+         case 10:
+            console.log(10);
+         case 11:
+            console.log(12);
+         case 12:
+            console.log(12);
+         case 13:
+            console.log(13);
+         case 14:
+            console.log(14);
+         case 15:
+            console.log(15);
+            break;
+         default:
+            alert("Вы ввели неправильное число");
+      }
+
+   </script> -->
+
+   <script>
+      var a = +prompt("Введите 1ое число");
+      var b = +prompt("Введите 2ое число")
+
+      var c = sum(a, b);
+
+      function sum(a, b) {
+         var res = a + b;
+         alert(res);
+         return;
+      }
+
+      function subtract(a, b) {
+         res = a - b;
+         alert(res);
+         return;
+      }
+
+      c = subtract(a, b);
+
+      function multiplication(a, b) {
+         res = a * b;
+         alert(res);
+         return;
+      }
+
+      c = multiplication(a, b);
+      c = division(a, b);
+      function division(a, b) {
+         res = a / b;
+         alert(res);
+         return;
+      }
+   </script> -->
+
+   6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation)
+
+   <script>
+
+      function mathOperation(arg1, arg2, operation) {
+         switch (operation) {
+            case "+":
+               return sum(arg1, arg2);
+            case "-":
+               return substract(arg1, arg2);
+            case "*":
+               return multiplication(arg1, arg2);
+            case "/":
+               return division(arg1, arg2);
+         }
+      }
+      mathOperation(4, 6, "*");
+
+   </script>
+
+
+
+</body>
+
+</html>

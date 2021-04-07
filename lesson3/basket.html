@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+
+      var goods = [];
+      var title, price, count, good;
+      for (; ;) {
+         title = prompt("Введите название товара");
+         if (title == "stop") {
+            break;
+         }
+         price = +prompt("Введите цену товара  " + title);
+         count = +prompt("Введите количество товара");
+         good = {
+            title: title,
+            price: price,
+            count: count
+         }
+         goods.push(good);
+      }
+
+      var countBascetPrice = 0;
+      for (var item of goods) {
+         countBascetPrice += (item.price * item.count);
+      }
+
+      alert("Сумма ваших товаров = " + countBascetPrice);
+
+
+
+
+
+   </script>
+
+
+
+
+</body>
+
+</html>

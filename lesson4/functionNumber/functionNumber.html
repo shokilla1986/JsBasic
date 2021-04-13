@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+
+      var num = prompt("Введите число от 0 до 999");
+      var object = [];
+      var numLength = num.length;
+
+      numbers(num);
+
+      function numbers(num) {
+         if ((num < 0) || (num > 999)) {
+            console.log("Вы ввели некоректное число");
+         } else {
+            switch (numLength) {
+               case 3:
+                  object.unit = num[2];
+                  object.tens = num[1];
+                  object.hungreds = num[0];
+                  break;
+               case 2:
+                  object.unit = num[1];
+                  object.tens = num[0];
+                  break;
+               default:
+                  object.unit = num;
+            }console.log(object)
+
+         }
+         return object;
+      }
+
+
+
+   </script>
+</body>
+
+</html>

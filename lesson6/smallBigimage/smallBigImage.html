@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Small and Big Image</title>
+</head>
+
+<body>
+   <div id="big_image"></div>
+   <div id="gallery">
+      <img onclick="changeBigImage()" id="image_1" src="smallImage/1.jpg">
+      <img onclick="changeBigImage()" id="image_2" src="smallImage/2.jpg">
+      <img onclick="changeBigImage()" id="image_3" src="smallImage/3.jpg">
+   </div>
+
+   <script>
+
+      var image = document.getElementsByTagName("img");
+      for (var i = 0; i < image.length; i++) {
+         image[i].onclick = changeBigImage;
+      }
+
+      function changeBigImage(event) {
+         var addImg = document.getElementById("big_image");
+         addImg.innerHTML = "";
+         var eventElement = event.target;
+         var imageNameParts = event.target.id.split("_");
+         var src = "bigImage/" + imageNameParts[1] + ".jpg";
+         var imageDomElement = document.createElement("img");
+         imageDomElement.src = src;
+         addImg.appendChild(imageDomElement);
+         imageDomElement.onerror = function () {
+            alert("Картинки не найдено!")
+         }
+      }
+
+
+   </script>
+</body>
+
+</html>
